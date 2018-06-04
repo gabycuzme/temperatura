@@ -1,0 +1,27 @@
+# Team Yaml
+coverage:
+  round: down
+  precision: 5
+
+# Repository Yaml
+coverage:
+  round: up
+  range: 0..10
+
+# Used in Codecov after updating
+coverage:
+  round: up
+  range: 0..10
+  precision: 5
+
+  # shell example
+  curl --data-binary @codecov.yml https://codecov.io/validate
+
+  # PowerShell Sample
+  Invoke-RestMethod -Uri https://codecov.io/validate -Body (Get-Content -Raw -LiteralPath .\.codecov.yml) -Method post
+
+codecov:
+  branch: master
+
+  codecov:
+    max_report_age: off
